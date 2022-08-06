@@ -1,7 +1,8 @@
 <h1>Orbit Report</h1>
 <app-orbit-list [satellites]="displayList"></app-orbit-list>
 <div class="search-form">
-	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm"/>
+	<!-- Extra on My Own: I added placeholder="Enter Request Here" below for the input box and set it to disappear upon focus/click in app.comp.css file.. -->
+	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm" placeholder="Enter Request Here"/>
 	<button (click)="search(searchTerm.value);">Search</button>
 </div>
 

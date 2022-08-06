@@ -1,6 +1,11 @@
 <h3>Satellite Count:</h3>
 <div class="counts">
 	<div>Total: <span class="counts-total">{{satellites.length}}</span></div>
+
+	<!-- Bonus 2b Note to Self: I copied line above and modified it below with an *ngFor to loop thru 
+		and display the number of each type using the types[] array I created on orbit-counts.component.ts  -->
+	<div *ngFor="let type of types">{{type}}: <span class="counts-total" >{{countByType(type)}}</span></div>
+
 </div>
 
 <!-- TODO 4: add logic to count number of satellites displayed -->
