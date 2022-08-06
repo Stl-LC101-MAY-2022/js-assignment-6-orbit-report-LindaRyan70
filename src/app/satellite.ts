@@ -15,9 +15,16 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
-   }
+		if (this.type.toLowerCase() === 'space debris') {
+			return true;
+		} else {
+			return false;
+		}
+   	}
 
 }
 
 // TODO 3a: fix isSpaceDebris check
+
+// Notes to Self: Remember you have to use this.type in the function, NOT Satellite.type. 
+// Adding .toLowerCase() not necessary but I prefer conditionals w/o capitalization issues.

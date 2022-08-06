@@ -11,3 +11,8 @@ button {
 	font-size: 18px;
 	cursor: pointer;
 }
+
+/* Extra on My Own: I researched and added a way for my search placeholder text to disappear upon click/focus. */
+input:focus::placeholder {
+	color: transparent;
+  }

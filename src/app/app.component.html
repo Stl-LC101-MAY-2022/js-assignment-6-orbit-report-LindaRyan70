@@ -1,10 +1,15 @@
 <h1>Orbit Report</h1>
-
+<app-orbit-list [satellites]="displayList"></app-orbit-list>
 <div class="search-form">
-	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm"/>
+	<!-- Extra on My Own: I added placeholder="Enter Request Here" below for the input box and set it to disappear upon focus/click in app.comp.css file.. -->
+	Search: <input #searchTerm type="text" (keyup.enter)="search(searchTerm.value);" name="searchTerm" placeholder="Enter Request Here"/>
 	<button (click)="search(searchTerm.value);">Search</button>
 </div>
 
 <app-orbit-counts [satellites]="displayList"></app-orbit-counts>
 
 <!-- TODO 1: add list component to app HTML -->
+
+<!-- Note to Self: I added <app-orbit-list> tag below <h1> above and then modified it with
+	Angular input proberty [satellites]="displayList" the textbook provided in Part 2a to pass the array of satellite data
+	into the orbit-list. [satellites]="" declares a new property on both the orbit-list and orbit-count components.-->

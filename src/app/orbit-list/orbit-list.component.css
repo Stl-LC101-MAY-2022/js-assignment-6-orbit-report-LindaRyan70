@@ -26,3 +26,8 @@ th, td {
 	margin: 5px 10px;
 	padding: 6px;
 }
+
+/* Bonus 1 Note to Self: I researched and found nth-child selector to alternate row colors. */
+.data-row:nth-child(even){
+	background-color: aqua;
+}
